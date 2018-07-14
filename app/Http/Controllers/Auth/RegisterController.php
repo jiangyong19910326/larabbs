@@ -51,6 +51,19 @@ class RegisterController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
+            'captcha' => 'required|captcha',
+        ], [
+            'captcha.required' => '验证码不能为空',
+            'captcha.captcha' => '请输入正确的验证码',
+            'name.required' => '用户名不能为空',
+            'name.max' => '用户名超过限制长度',
+            'email.required' => '邮箱不能为空',
+            'email.email' => '请输入正确的邮箱',
+            'email.max' => '邮箱超过限制长度',
+            'email.unique' => '邮箱已经存在',
+            'password.required' => '密码不能为空',
+            'password.min' => '密码最少6位',
+            'password.confirmed' => '密码和重复密码不一致',
         ]);
     }
 
