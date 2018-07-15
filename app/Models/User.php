@@ -11,11 +11,11 @@ class User extends Authenticatable
 
     /**
      * The attributes that are mass assignable.
-     *
+     * @添加用户表的白名单属性
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password','introduction',
+        'name', 'email', 'password','introduction','avatar',
     ];
 
     /**
