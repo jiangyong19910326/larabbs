@@ -26,4 +26,14 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @模型关联话题模型
+     */
+    public function topics()
+    {
+        return $this->hasMany(Topic::class);
+    }
 }
