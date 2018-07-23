@@ -18,4 +18,15 @@ class TopicObserver
     {
         //
     }
+
+
+    /**
+     * @param Topic $topic
+     * @模型观察 当模型发生更新保存的时候 excerpt 从内容从获取一段
+     *
+     */
+    public function saving(Topic $topic)
+    {
+        $topic->excerpt = make_excerpt($topic->body);
+    }
 }
