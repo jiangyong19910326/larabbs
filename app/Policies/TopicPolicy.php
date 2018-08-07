@@ -16,4 +16,6 @@ class TopicPolicy extends Policy
     {
         return $user->isAuthOf($topic);  //使用重构代码
     }
+
+
 }
