@@ -12,6 +12,10 @@ class CategoriesController extends Controller
 {
     /**
      * @param Category $category
+     * @param Request $request
+     * @param Topic $topic
+     * @param User $user
+     * @param Link $link
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      * @话题列表分类
      */

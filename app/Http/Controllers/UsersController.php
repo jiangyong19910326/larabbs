@@ -37,7 +37,6 @@ class UsersController extends Controller
      */
     public function edit(User $user)
     {
-        var_dump($this->authorize('update', $user));die();
         $this->authorize('update', $user);
         return view('users.edit',compact('user'));
     }
@@ -51,7 +50,6 @@ class UsersController extends Controller
      */
     public function update(UserRequest $request, ImageUploadHandler $uploader, User $user)
     {
-        var_dump($this->authorize('update', $user));
         $data = $request->all();
 
         if ($request->avatar) {
